@@ -1,0 +1,8 @@
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.DTO\bin\Debug\netcoreapp3.1\YSKProje.DTO.deps.json
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.DTO\bin\Debug\netcoreapp3.1\YSKProje.DTO.dll
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.DTO\bin\Debug\netcoreapp3.1\YSKProje.DTO.pdb
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.DTO\obj\Debug\netcoreapp3.1\YSKProje.DTO.AssemblyInfoInputs.cache
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.DTO\obj\Debug\netcoreapp3.1\YSKProje.DTO.AssemblyInfo.cs
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.DTO\obj\Debug\netcoreapp3.1\YSKProje.DTO.csproj.CoreCompileInputs.cache
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.DTO\obj\Debug\netcoreapp3.1\YSKProje.DTO.dll
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.DTO\obj\Debug\netcoreapp3.1\YSKProje.DTO.pdb

@@ -1,0 +1,8 @@
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.Entities\bin\Debug\netcoreapp3.1\YSKProje.Entities.deps.json
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.Entities\bin\Debug\netcoreapp3.1\YSKProje.Entities.dll
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.Entities\bin\Debug\netcoreapp3.1\YSKProje.Entities.pdb
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.Entities\obj\Debug\netcoreapp3.1\YSKProje.Entities.AssemblyInfoInputs.cache
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.Entities\obj\Debug\netcoreapp3.1\YSKProje.Entities.AssemblyInfo.cs
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.Entities\obj\Debug\netcoreapp3.1\YSKProje.Entities.csproj.CoreCompileInputs.cache
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.Entities\obj\Debug\netcoreapp3.1\YSKProje.Entities.dll
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.Entities\obj\Debug\netcoreapp3.1\YSKProje.Entities.pdb

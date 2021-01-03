@@ -1,0 +1,15 @@
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.DataAccess\bin\Debug\netcoreapp3.1\YSKProje.Entities.dll
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.DataAccess\obj\Debug\netcoreapp3.1\YSKProje.DataAccess.csprojAssemblyReference.cache
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.DataAccess\obj\Debug\netcoreapp3.1\YSKProje.DataAccess.AssemblyInfoInputs.cache
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.DataAccess\obj\Debug\netcoreapp3.1\YSKProje.DataAccess.AssemblyInfo.cs
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.DataAccess\bin\Debug\netcoreapp3.1\YSKProje.DataAccess.deps.json
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.DataAccess\bin\Debug\netcoreapp3.1\YSKProje.DataAccess.runtimeconfig.json
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.DataAccess\bin\Debug\netcoreapp3.1\YSKProje.DataAccess.runtimeconfig.dev.json
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.DataAccess\bin\Debug\netcoreapp3.1\YSKProje.DataAccess.dll
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.DataAccess\bin\Debug\netcoreapp3.1\YSKProje.DataAccess.pdb
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.DataAccess\bin\Debug\netcoreapp3.1\YSKProje.Entities.pdb
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.DataAccess\obj\Debug\netcoreapp3.1\YSKProje.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.DataAccess\obj\Debug\netcoreapp3.1\YSKProje.DataAccess.csproj.CopyComplete
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.DataAccess\obj\Debug\netcoreapp3.1\YSKProje.DataAccess.dll
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.DataAccess\obj\Debug\netcoreapp3.1\YSKProje.DataAccess.pdb
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.DataAccess\obj\Debug\netcoreapp3.1\YSKProje.DataAccess.genruntimeconfig.cache
