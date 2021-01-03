@@ -2,6 +2,44 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "FluentValidation/9.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/FluentValidation.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.dll": {}
+        }
+      },
+      "FluentValidation.AspNetCore/9.3.0": {
+        "type": "package",
+        "dependencies": {
+          "FluentValidation": "9.3.0",
+          "FluentValidation.DependencyInjectionExtensions": "9.3.0"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/FluentValidation.AspNetCore.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/FluentValidation.AspNetCore.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "FluentValidation.DependencyInjectionExtensions/9.3.0": {
+        "type": "package",
+        "dependencies": {
+          "FluentValidation": "9.3.0",
+          "Microsoft.Extensions.Dependencyinjection.Abstractions": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.5.0": {
         "type": "package",
         "compile": {
@@ -1489,6 +1527,7 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.1",
+          "YSKProje.DTO": "1.0.0",
           "YSKProje.Entities": "1.0.0"
         },
         "compile": {
@@ -1496,6 +1535,16 @@
         },
         "runtime": {
           "bin/placeholder/YSKProje.DataAccess.dll": {}
+        }
+      },
+      "YSKProje.DTO/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/YSKProje.DTO.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/YSKProje.DTO.dll": {}
         }
       },
       "YSKProje.Entities/1.0.0": {
@@ -1511,6 +1560,56 @@
     }
   },
   "libraries": {
+    "FluentValidation/9.3.0": {
+      "sha512": "C44l6Ih+YwpED/TsXfl6LIq6Z4wLXahstnr6T70uUg1Hs7/bLBKKAo9Nl0sLhVjDE8TA+fF+O3IM4nDrwabcSQ==",
+      "type": "package",
+      "path": "fluentvalidation/9.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluent-validation-icon.png",
+        "fluentvalidation.9.3.0.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net461/FluentValidation.dll",
+        "lib/net461/FluentValidation.xml",
+        "lib/net5.0/FluentValidation.dll",
+        "lib/net5.0/FluentValidation.xml",
+        "lib/netstandard2.0/FluentValidation.dll",
+        "lib/netstandard2.0/FluentValidation.xml"
+      ]
+    },
+    "FluentValidation.AspNetCore/9.3.0": {
+      "sha512": "0ZKHVvNIVgZEGgCe8z4NyVoPaCmM0kTRM0EySC23Enuc4jzBdhI+LtGhcvkF7lAulNlxR2S9IDnLibOM6RDaHg==",
+      "type": "package",
+      "path": "fluentvalidation.aspnetcore/9.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluent-validation-icon.png",
+        "fluentvalidation.aspnetcore.9.3.0.nupkg.sha512",
+        "fluentvalidation.aspnetcore.nuspec",
+        "lib/net5.0/FluentValidation.AspNetCore.dll",
+        "lib/net5.0/FluentValidation.AspNetCore.xml",
+        "lib/netcoreapp2.1/FluentValidation.AspNetCore.dll",
+        "lib/netcoreapp2.1/FluentValidation.AspNetCore.xml",
+        "lib/netcoreapp3.1/FluentValidation.AspNetCore.dll",
+        "lib/netcoreapp3.1/FluentValidation.AspNetCore.xml"
+      ]
+    },
+    "FluentValidation.DependencyInjectionExtensions/9.3.0": {
+      "sha512": "5PnAIlsApzWPp9rjxfu3xVWSj2qMDeFnEE3P4yx/oIQO1aLhPEEn4yW7JiydP9kpQKAtZ53qwNaOoQ1xSxajuA==",
+      "type": "package",
+      "path": "fluentvalidation.dependencyinjectionextensions/9.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluent-validation-icon.png",
+        "fluentvalidation.dependencyinjectionextensions.9.3.0.nupkg.sha512",
+        "fluentvalidation.dependencyinjectionextensions.nuspec",
+        "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll",
+        "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.xml"
+      ]
+    },
     "Microsoft.CSharp/4.5.0": {
       "sha512": "kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
       "type": "package",
@@ -5725,6 +5824,11 @@
       "path": "../YSKProje.DataAccess/YSKProje.DataAccess.csproj",
       "msbuildProject": "../YSKProje.DataAccess/YSKProje.DataAccess.csproj"
     },
+    "YSKProje.DTO/1.0.0": {
+      "type": "project",
+      "path": "../YSKProje.DTO/YSKProje.DTO.csproj",
+      "msbuildProject": "../YSKProje.DTO/YSKProje.DTO.csproj"
+    },
     "YSKProje.Entities/1.0.0": {
       "type": "project",
       "path": "../YSKProje.Entities/YSKProje.Entities.csproj",
@@ -5733,6 +5837,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "FluentValidation.AspNetCore >= 9.3.0",
+      "YSKProje.DTO >= 1.0.0",
       "YSKProje.DataAccess >= 1.0.0",
       "YSKProje.Entities >= 1.0.0"
     ]
@@ -5766,6 +5872,9 @@
             "C:\\Users\\KLharomin\\source\\repos\\YSKProje\\YSKProje.DataAccess\\YSKProje.DataAccess.csproj": {
               "projectPath": "C:\\Users\\KLharomin\\source\\repos\\YSKProje\\YSKProje.DataAccess\\YSKProje.DataAccess.csproj"
             },
+            "C:\\Users\\KLharomin\\source\\repos\\YSKProje\\YSKProje.DTO\\YSKProje.DTO.csproj": {
+              "projectPath": "C:\\Users\\KLharomin\\source\\repos\\YSKProje\\YSKProje.DTO\\YSKProje.DTO.csproj"
+            },
             "C:\\Users\\KLharomin\\source\\repos\\YSKProje\\YSKProje.Entities\\YSKProje.Entities.csproj": {
               "projectPath": "C:\\Users\\KLharomin\\source\\repos\\YSKProje\\YSKProje.Entities\\YSKProje.Entities.csproj"
             }
@@ -5780,6 +5889,12 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "dependencies": {
+          "FluentValidation.AspNetCore": {
+            "target": "Package",
+            "version": "[9.3.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
@@ -5791,6 +5906,9 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }

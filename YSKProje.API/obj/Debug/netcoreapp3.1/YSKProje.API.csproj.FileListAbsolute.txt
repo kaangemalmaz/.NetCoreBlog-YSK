@@ -166,3 +166,8 @@ C:\Users\KLharomin\source\repos\YSKProje\YSKProje.API\bin\Debug\netcoreapp3.1\Mi
 C:\Users\KLharomin\source\repos\YSKProje\YSKProje.API\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 C:\Users\KLharomin\source\repos\YSKProje\YSKProje.API\obj\Debug\netcoreapp3.1\YSKProje.API.csproj.CoreCompileInputs.cache
 C:\Users\KLharomin\source\repos\YSKProje\YSKProje.API\obj\Debug\netcoreapp3.1\YSKProje.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.API\bin\Debug\netcoreapp3.1\FluentValidation.dll
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.API\bin\Debug\netcoreapp3.1\FluentValidation.AspNetCore.dll
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.API\bin\Debug\netcoreapp3.1\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.API\obj\Debug\netcoreapp3.1\YSKProje.API.MvcApplicationPartsAssemblyInfo.cs

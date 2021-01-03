@@ -1,5 +1,7 @@
-﻿using YSKProje.Business.Interfaces;
+﻿using System.Threading.Tasks;
+using YSKProje.Business.Interfaces;
 using YSKProje.DataAccess.Interfaces;
+using YSKProje.DTO.DTOs.AppUserDtos;
 using YSKProje.Entities.Concrete;
 
 namespace YSKProje.Business.Concrete
@@ -11,6 +13,17 @@ namespace YSKProje.Business.Concrete
         public AppUserManager(IGenericDal<AppUser> genericDal) : base(genericDal)
         {
             _genericDal = genericDal;
+        }
+
+        public async Task<AppUser> CheckUserAsync(AppUserLoginDto appUserLoginDto)
+        {
+            return await _genericDal.GetAsync(i => i.UserName == appUserLoginDto.UserName &&
+            i.Password == appUserLoginDto.Password);
+        }
+
+        public async Task<AppUser> FindByNameAsync(string userName)
+        {
+            return await _genericDal.GetAsync(i => i.UserName == userName);
         }
     }
 }

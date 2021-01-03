@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "qQL7u1abV4L+s8tptNTcbuDz/IrEPOP7mHbpw633dRsERGCYDUhBmzRSFEAo6IkdgH/792iiCRqz516QyNJRRg==",
+  "dgSpecHash": "JJFmlVRY1pwLYA0j9uny+C2QfgvCVvZ/5DJCnvPnwNjr+XmVgArB2zTwXE0qVuzBw0kUUmXXDGSqp0R+sY+OQQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\KLharomin\\source\\repos\\YSKProje\\YSKProje.Business\\YSKProje.Business.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\KLharomin\\.nuget\\packages\\fluentvalidation\\9.3.0\\fluentvalidation.9.3.0.nupkg.sha512",
+    "C:\\Users\\KLharomin\\.nuget\\packages\\fluentvalidation.aspnetcore\\9.3.0\\fluentvalidation.aspnetcore.9.3.0.nupkg.sha512",
+    "C:\\Users\\KLharomin\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\9.3.0\\fluentvalidation.dependencyinjectionextensions.9.3.0.nupkg.sha512",
     "C:\\Users\\KLharomin\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\KLharomin\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "C:\\Users\\KLharomin\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.1\\microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",

@@ -1,11 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "014AXapD57iOXR2gymhgmphduhz3fkiftEuGtXfSPQ8QytEbftmscvc0bU+CWQzkXwn7fJqJ5mamFA6np2cTtw==",
+  "dgSpecHash": "XeoFjArUlPcM3MOLhRbsNly87pIat6HsZQB1D9hb1lVfeqf99Zc23qmeximFPXotpWjwGAyzUtAZwn5YlQaXsQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\KLharomin\\source\\repos\\YSKProje\\YSKProje.API\\YSKProje.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\KLharomin\\.nuget\\packages\\automapper\\10.1.0\\automapper.10.1.0.nupkg.sha512",
     "C:\\Users\\KLharomin\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
+    "C:\\Users\\KLharomin\\.nuget\\packages\\fluentvalidation\\9.3.0\\fluentvalidation.9.3.0.nupkg.sha512",
+    "C:\\Users\\KLharomin\\.nuget\\packages\\fluentvalidation.aspnetcore\\9.3.0\\fluentvalidation.aspnetcore.9.3.0.nupkg.sha512",
+    "C:\\Users\\KLharomin\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\9.3.0\\fluentvalidation.dependencyinjectionextensions.9.3.0.nupkg.sha512",
+    "C:\\Users\\KLharomin\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.10\\microsoft.aspnetcore.authentication.jwtbearer.3.1.10.nupkg.sha512",
     "C:\\Users\\KLharomin\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\KLharomin\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.10\\microsoft.aspnetcore.jsonpatch.3.1.10.nupkg.sha512",
     "C:\\Users\\KLharomin\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\3.1.10\\microsoft.aspnetcore.mvc.newtonsoftjson.3.1.10.nupkg.sha512",

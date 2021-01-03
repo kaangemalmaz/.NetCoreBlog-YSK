@@ -7,5 +7,6 @@ namespace YSKProje.Business.Interfaces
     public interface ICategoryService : IGenericService<Category>
     {
         Task<List<Category>> GetAllSortedByIdAsync();
+        Task<List<Category>> GetAllCategoryWithBlogsCount();
     }
 }

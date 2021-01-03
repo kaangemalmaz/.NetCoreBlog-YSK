@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "xYP0IGS9KunQa9o3K0s2fAHdq0fkhyXzVPMWFLKETpZnUyQV1z2yuvN/I9cU68OsbAODbCIQgAuj0o6K060mXA==",
+  "dgSpecHash": "+ZqHahmrewKx97pRqGpknrrwrBYrQPqkXYjHl8ntiXlgCN7miHZHm5laO/eVlfOFEV86WHViFsmpGq+duyzF1Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\KLharomin\\source\\repos\\YSKProje\\YSKProje.WEB\\YSKProje.WEB.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\KLharomin\\.nuget\\packages\\fluentvalidation\\9.3.0\\fluentvalidation.9.3.0.nupkg.sha512",
+    "C:\\Users\\KLharomin\\.nuget\\packages\\fluentvalidation.aspnetcore\\9.3.0\\fluentvalidation.aspnetcore.9.3.0.nupkg.sha512",
+    "C:\\Users\\KLharomin\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\9.3.0\\fluentvalidation.dependencyinjectionextensions.9.3.0.nupkg.sha512",
     "C:\\Users\\KLharomin\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\KLharomin\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
     "C:\\Users\\KLharomin\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\3.1.0\\microsoft.aspnetcore.razor.language.3.1.0.nupkg.sha512",

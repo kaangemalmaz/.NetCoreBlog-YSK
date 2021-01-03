@@ -5,12 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="ValidationRules\" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="9.3.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\YSKProje.DataAccess\YSKProje.DataAccess.csproj" />
+    <ProjectReference Include="..\YSKProje.DTO\YSKProje.DTO.csproj" />
     <ProjectReference Include="..\YSKProje.Entities\YSKProje.Entities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ValidationRules\FluentValidation\Blog\" />
   </ItemGroup>
 
 </Project>

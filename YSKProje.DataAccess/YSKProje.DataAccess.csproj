@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\YSKProje.DTO\YSKProje.DTO.csproj" />
     <ProjectReference Include="..\YSKProje.Entities\YSKProje.Entities.csproj" />
   </ItemGroup>
 

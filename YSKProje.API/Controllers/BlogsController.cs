@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using AutoMapper;
-using Microsoft.AspNetCore.Http;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using YSKProje.API.CustomFilter;
 using YSKProje.API.Enums;
 using YSKProje.API.Models.Blog;
 using YSKProje.Business.Interfaces;
-using YSKProje.DataAccess.Concrete.EntityFrameworkCore.Context;
 using YSKProje.DTO.DTOs.BlogDtos;
+using YSKProje.DTO.DTOs.CategoryBlogDtos;
 using YSKProje.Entities.Concrete;
 
 namespace YSKProje.API.Controllers
@@ -38,6 +35,7 @@ namespace YSKProje.API.Controllers
 
         // GET: api/Blogs/5
         [HttpGet("{id}")]
+        [ServiceFilter(typeof(ValidId<Blog>))]
         public async Task<ActionResult<Blog>> GetBlog(int id)
         {
             var blog = await _blogService.FindByIdAsync(id);
@@ -54,6 +52,9 @@ namespace YSKProje.API.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
+        [Authorize]
+        [ValidModel]
+        [ServiceFilter(typeof(ValidId<Blog>))]
         public async Task<IActionResult> PutBlog(int id, [FromForm] BlogUpdateModel blogUpdateModel)
         {
             if (id != blogUpdateModel.Id)
@@ -83,7 +84,7 @@ namespace YSKProje.API.Controllers
             else
             {
                 return BadRequest("Resim kaydedilirken problem oluştu.");
-            }            
+            }
 
             return NoContent();
         }
@@ -92,6 +93,8 @@ namespace YSKProje.API.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
+        [Authorize]
+        [ValidModel]
         public async Task<ActionResult<Blog>> PostBlog([FromForm] BlogAddModel blogAddModel)
         {
             var uploadModel = await UploadImage(blogAddModel.Image, "image/jpeg");
@@ -114,6 +117,8 @@ namespace YSKProje.API.Controllers
 
         // DELETE: api/Blogs/5
         [HttpDelete("{id}")]
+        [Authorize]
+        [ServiceFilter(typeof(ValidId<Blog>))]
         public async Task<ActionResult<Blog>> DeleteBlog(int id)
         {
             var blog = await _blogService.FindByIdAsync(id);
@@ -125,6 +130,28 @@ namespace YSKProje.API.Controllers
             await _blogService.RemoveAsync(blog);
 
             return blog;
+        }
+
+        [HttpPost("[action]")]
+        [ValidModel]
+        public async Task<IActionResult> AddToCategory(CategoryBlogDto categoryBlogDto)
+        {
+            await _blogService.AddToCategoryAsync(categoryBlogDto);
+            return Created("", categoryBlogDto);
+        }
+
+        [HttpDelete("[action]")]
+        public async Task<IActionResult> RemoveFromCategory(CategoryBlogDto categoryBlogDto)
+        {
+            await _blogService.RemoveFromCategoryAsync(categoryBlogDto);
+            return NoContent();
+        }
+
+        [HttpGet("[action]/{id}")]
+        [ServiceFilter(typeof(ValidId<Category>))]
+        public async Task<IActionResult> GetAllByCategoryId(int id)
+        {
+            return Ok(await _blogService.GetAllByCategoryId(id));
         }
     }
 }
