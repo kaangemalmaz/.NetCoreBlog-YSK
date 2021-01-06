@@ -47,6 +47,15 @@ namespace YSKProje.WEB
 
             });
 
+            services.AddHttpClient<IImageApiService, ImageApiManager>().ConfigurePrimaryHttpMessageHandler(() =>
+            {
+                var handler = new HttpClientHandler();
+                handler.ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator;
+                handler.SslProtocols = SslProtocols.Tls12 | SslProtocols.Tls11 | SslProtocols.Tls;
+                return handler;
+
+            });
+
             services.AddControllersWithViews();
         }
 

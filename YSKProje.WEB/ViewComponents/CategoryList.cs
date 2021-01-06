@@ -14,7 +14,7 @@ namespace YSKProje.WEB.ViewComponents
 
         public IViewComponentResult Invoke()
         {
-            return View(_service.GetAllCategoriesAsync().Result);
+            return View(_service.CategoryWithBlogsCount().Result);
         }
     }
 }

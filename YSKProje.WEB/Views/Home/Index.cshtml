@@ -1,17 +1,36 @@
 ﻿@model List<BlogListModel>
 
-@foreach (var blog in Model)
-{
-    <div class="card mb-4">
-        <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
-        <div class="card-body">
-            <h2 class="card-title">@blog.Title</h2>
-            <p class="card-text">@blog.ShortDescription</p>
-            <a asp-controller="Home" asp-action="BlogDetail" asp-route-id="@blog.Id" class="btn btn-primary" >Read More &rarr;</a>
-        </div>
-        <div class="card-footer text-muted">
-            Posted on @blog.PostedTime.ToLongDateString()
-        </div>
 
+@if (Model.Count < 1)
+{
+    <div class="alert alert-danger">
+        Bu kategory için henüz bir blog yoktur. En kısa sürede tamamlayacağız. Lütfen beklemede kalın.
     </div>
+}
+else
+{
+
+
+    @if (ViewBag.activeCategory != null)
+    {
+        @await Component.InvokeAsync("GetCategoryName", new { @categoryId = (int)ViewBag.activeCategory });
+    }
+
+
+    @foreach (var blog in Model)
+    {
+        <div class="card mb-4">
+            <getblogimage id="@blog.Id"></getblogimage>
+            <div class="card-body">
+                <h2 class="card-title">@blog.Title</h2>
+                <p class="card-text">@blog.ShortDescription</p>
+                <a asp-controller="Home" asp-action="BlogDetail" asp-route-id="@blog.Id" class="btn btn-primary">Read More &rarr;</a>
+            </div>
+            <div class="card-footer text-muted">
+                Posted on @blog.PostedTime.ToLongDateString()
+            </div>
+
+        </div>
+    }
+
 }

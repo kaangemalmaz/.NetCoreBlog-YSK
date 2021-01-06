@@ -18,7 +18,7 @@ namespace YSKProje.API.CustomFilter
 
         public void OnActionExecuted(ActionExecutedContext context)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         public void OnActionExecuting(ActionExecutingContext context)

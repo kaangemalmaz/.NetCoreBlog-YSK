@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace YSKProje.DTO.DTOs.CategoryDtos
+﻿namespace YSKProje.DTO.DTOs.CategoryDtos
 {
     public class CategoryWithBlogsCountDto : CategoryListDto
     {
