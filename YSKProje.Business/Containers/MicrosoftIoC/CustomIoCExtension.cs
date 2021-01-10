@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using YSKProje.Business.Concrete;
 using YSKProje.Business.Interfaces;
+using YSKProje.Business.Tools.JWTTool;
 using YSKProje.Business.ValidationRules.FluentValidation.AppUser;
 using YSKProje.Business.ValidationRules.FluentValidation.Category;
 using YSKProje.Business.ValidationRules.FluentValidation.CategoryBlog;
@@ -31,6 +32,8 @@ namespace YSKProje.Business.Containers.MicrosoftIoC
             services.AddScoped<ICategoryBlogService, CategoryBlogManager>();
             services.AddScoped<ICategoryService, CategoryManager>();
             services.AddScoped<ICommentService, CommentManager>();
+
+            services.AddScoped<IJwtService, JwtManager>();
 
 
             services.AddTransient<IValidator<AppUserLoginDto>, AppUserLoginValidator>();

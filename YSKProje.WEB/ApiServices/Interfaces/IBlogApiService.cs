@@ -9,5 +9,9 @@ namespace YSKProje.WEB.ApiServices.Interfaces
         Task<List<BlogListModel>> GetAllAsync();
         Task<BlogListModel> GetByIdAsync(int id);
         Task<List<BlogListModel>> GetAllByCategoryIdAsync(int categoryId);
+        Task AddAsync(BlogAddModel blogAddModel);
+        Task UpdateAsync(BlogUpdateModel blogUpdateModel);
+        Task DeleteAsync(int id);
+
     }
 }

@@ -9,5 +9,8 @@ namespace YSKProje.WEB.ApiServices.Interfaces
         Task<List<CategoryListModel>> GetAllCategoriesAsync();
         Task<List<CategoryWithBlogsCountModel>> CategoryWithBlogsCount();
         Task<CategoryListModel> GetCategoryById(int id);
+        Task CategoryAdd(CategoryAddModel categoryAddModel);
+        Task CategoryUpdate(CategoryUpdateModel categoryUpdateModel);
+        Task CategoryDelete(int id);
     }
 }

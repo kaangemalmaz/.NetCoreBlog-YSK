@@ -15,7 +15,7 @@ namespace YSKProje.Business.Tools.JWTTool
         {
             SymmetricSecurityKey securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(JwtInfo.SecurityKey));
 
-            SigningCredentials signingCredentials = new SigningCredentials(securityKey, algorithm: SecurityAlgorithms.HmacSha256);
+            SigningCredentials signingCredentials = new SigningCredentials(securityKey,  SecurityAlgorithms.HmacSha256);
 
             JwtSecurityToken jwtSecurityToken = new JwtSecurityToken(JwtInfo.Issuer, JwtInfo.Audience, claims: SetClaims(appUser), notBefore: DateTime.Now, expires: DateTime.Now.AddMinutes(JwtInfo.Expires), signingCredentials: signingCredentials);
 
@@ -29,7 +29,7 @@ namespace YSKProje.Business.Tools.JWTTool
         {
             List<Claim> claims = new List<Claim>();
 
-            claims.Add(new Claim(ClaimTypes.Name, appUser.Name));
+            claims.Add(new Claim(ClaimTypes.Name, appUser.UserName));
             claims.Add(new Claim(ClaimTypes.NameIdentifier, appUser.Id.ToString()));
 
             return claims;

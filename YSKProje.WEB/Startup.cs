@@ -27,34 +27,50 @@ namespace YSKProje.WEB
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+           
+            services.AddHttpContextAccessor();
+            services.AddSession();
             //services.AddHttpClient<IBlogApiService, BlogApiManager>();
             //services.AddHttpClient<ICategoryApiService, CategoryApiManager>();
-            services.AddHttpClient<IBlogApiService,BlogApiManager>().ConfigurePrimaryHttpMessageHandler(() =>
-            {
-                var handler = new HttpClientHandler();
-                handler.ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator;
-                handler.SslProtocols = SslProtocols.Tls12 | SslProtocols.Tls11 | SslProtocols.Tls;
-                return handler;
+            services.AddHttpClient<IBlogApiService, BlogApiManager>();
+            services.AddHttpClient<ICategoryApiService, CategoryApiManager>();
+            services.AddHttpClient<IImageApiService, ImageApiManager>();
+            services.AddHttpClient<IAuthApiService, AuthApiManager>();
+            //services.AddHttpClient<IBlogApiService, BlogApiManager>().ConfigurePrimaryHttpMessageHandler(() =>
+            // {
+            //     var handler = new HttpClientHandler();
+            //     handler.ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator;
+            //     handler.SslProtocols = SslProtocols.Tls12 | SslProtocols.Tls11 | SslProtocols.Tls;
+            //     return handler;
 
-            });
+            // });
 
-            services.AddHttpClient<ICategoryApiService,CategoryApiManager>().ConfigurePrimaryHttpMessageHandler(() =>
-            {
-                var handler = new HttpClientHandler();
-                handler.ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator;
-                handler.SslProtocols = SslProtocols.Tls12 | SslProtocols.Tls11 | SslProtocols.Tls;
-                return handler;
+            //services.AddHttpClient<ICategoryApiService, CategoryApiManager>().ConfigurePrimaryHttpMessageHandler(() =>
+            // {
+            //     var handler = new HttpClientHandler();
+            //     handler.ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator;
+            //     handler.SslProtocols = SslProtocols.Tls12 | SslProtocols.Tls11 | SslProtocols.Tls;
+            //     return handler;
 
-            });
+            // });
 
-            services.AddHttpClient<IImageApiService, ImageApiManager>().ConfigurePrimaryHttpMessageHandler(() =>
-            {
-                var handler = new HttpClientHandler();
-                handler.ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator;
-                handler.SslProtocols = SslProtocols.Tls12 | SslProtocols.Tls11 | SslProtocols.Tls;
-                return handler;
+            //services.AddHttpClient<IImageApiService, ImageApiManager>().ConfigurePrimaryHttpMessageHandler(() =>
+            //{
+            //    var handler = new HttpClientHandler();
+            //    handler.ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator;
+            //    handler.SslProtocols = SslProtocols.Tls12 | SslProtocols.Tls11 | SslProtocols.Tls;
+            //    return handler;
 
-            });
+            //});
+
+            //services.AddHttpClient<IAuthApiService, AuthApiManager>().ConfigurePrimaryHttpMessageHandler(() =>
+            //{
+            //    var handler = new HttpClientHandler();
+            //    handler.ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator;
+            //    handler.SslProtocols = SslProtocols.Tls12 | SslProtocols.Tls11 | SslProtocols.Tls;
+            //    return handler;
+
+            //});
 
             services.AddControllersWithViews();
         }
@@ -72,21 +88,21 @@ namespace YSKProje.WEB
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
             app.UseStaticFiles();
-
             app.UseRouting();
-
-            app.UseAuthorization();
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapDefaultControllerRoute();
-                
-                
-                //MapControllerRoute(
-                //    name: "default",
-                //    pattern: "{controller=Home}/{action=Index}/{id?}");
+                //endpoints.MapDefaultControllerRoute();
+                endpoints.MapControllerRoute(
+                name: "areas",
+                pattern: "{area}/{controller=Home}/{action=Index}/{id?}");
+
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

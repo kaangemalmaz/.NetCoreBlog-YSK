@@ -10,7 +10,7 @@
     <link href="~/css/simplex.css" rel="stylesheet" />
 </head>
 <body>
-    <form action="SignIn" method="post" class="w-50 mt-5 p-3 mx-auto shadow">
+    <form asp-controller="Account" asp-action="SignIn" method="post" class="w-50 mt-5 p-3 mx-auto shadow">
 
         <div class="form-group">
             <label asp-for="UserName">Kullanıcı Adı</label>

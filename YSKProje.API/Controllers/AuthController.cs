@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 using YSKProje.API.CustomFilter;
 using YSKProje.Business.Interfaces;
 using YSKProje.Business.Tools.JWTTool;
@@ -24,7 +20,7 @@ namespace YSKProje.API.Controllers
             _jwtService = jwtService;
         }
 
-        [HttpPost]
+        [HttpPost("[action]")]
         [ValidModel]
         public async Task<IActionResult> SignIn(AppUserLoginDto appUserLoginDto)
         {
@@ -41,7 +37,8 @@ namespace YSKProje.API.Controllers
         public async Task<IActionResult> ActiveUser()
         {
             var user = await _appUserService.FindByNameAsync(User.Identity.Name);
-            return Ok(new AppUserDto { Name = user.Name, SurName = user.SurName });
+
+            return Ok(new AppUserDto { Id = user.Id, Name = user.Name, SurName = user.SurName });
         }
     }
 }

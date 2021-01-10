@@ -4,7 +4,7 @@ namespace YSKProje.API.Models.Blog
 {
     public class BlogAddModel
     {
-        public int AppUserId { get; set; }
+        public int AppUserId { get; set; } = 1;
         public string Title { get; set; }
         public string ShortDescription { get; set; }
         public string Description { get; set; }
