@@ -183,7 +183,7 @@ namespace YSKProje.API.Controllers
         [HttpGet("[action]")]
         public async Task<IActionResult> Search([FromQuery] string s)
         {
-            return Ok(_mapper.Map<BlogListDto>(await _blogService.Search(s)));
+            return Ok(_mapper.Map<List<BlogListDto>>(await _blogService.Search(s)));
         }
 
         [HttpPost("[action]")]

@@ -176,7 +176,7 @@ namespace YSKProje.WEB.ApiServices.Concrete
             return null;
         }
 
-        public async Task<List<BlogListModel>> Search([FromQuery] string s)
+        public async Task<List<BlogListModel>> Search(string s)
         {
             var responseMessage = await _httpClient.GetAsync($"Search?s={s}");
             if (responseMessage.IsSuccessStatusCode)
@@ -198,7 +198,7 @@ namespace YSKProje.WEB.ApiServices.Concrete
         {
             
 
-            await _httpClient.DeleteAsync($"RemoveFromCategory?{nameof(CategoryBlogModel.CategoryId)} == {model.CategoryId} & {nameof(CategoryBlogModel.BlogId)} == {model.BlogId}");
+            await _httpClient.DeleteAsync($"RemoveFromCategory?{nameof(CategoryBlogModel.CategoryId)}={model.CategoryId}&{nameof(CategoryBlogModel.BlogId)}={model.BlogId}");
         }
     }
 }

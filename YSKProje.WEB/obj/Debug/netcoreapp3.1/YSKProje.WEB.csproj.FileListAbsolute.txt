@@ -201,3 +201,6 @@ C:\Users\KLharomin\source\repos\YSKProje\YSKProje.WEB\obj\Debug\netcoreapp3.1\Ra
 C:\Users\KLharomin\source\repos\YSKProje\YSKProje.WEB\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Categories\Index.cshtml.g.cs
 C:\Users\KLharomin\source\repos\YSKProje\YSKProje.WEB\bin\Debug\netcoreapp3.1\NLog.config
 C:\Users\KLharomin\source\repos\YSKProje\YSKProje.WEB\bin\Debug\netcoreapp3.1\NLog.dll
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.WEB\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Blogs\AssignCategory.cshtml.g.cs
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.WEB\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Search\default.cshtml.g.cs
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.WEB\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\LastFiveBlog\default.cshtml.g.cs

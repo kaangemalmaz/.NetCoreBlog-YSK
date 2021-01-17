@@ -8,13 +8,13 @@
     <h3 class="text-center my-3">Kategori Listesi</h3>
 
 <p>
-    <a asp-action="Create" class="btn btn-success btn-sm float-right mb-3"> Create New</a>
+    <a asp-action="Create" class="btn btn-success btn-sm float-right mb-3">Yeni Kategori</a>
 </p>
-<table class="table table-bordered table-striped">
+<table class="table table-bordered table-striped table-sm">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                Kategori İsmi
             </th>
             <th>Tablo İşlemleri</th>
         </tr>
@@ -27,8 +27,8 @@
                     @Html.DisplayFor(modelItem => item.Name)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-info">Edit</a> 
-                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-info">Düzenle</a> 
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Sil</a>
                 </td>
             </tr>
         }

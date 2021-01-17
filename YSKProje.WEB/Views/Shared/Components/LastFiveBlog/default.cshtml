@@ -1,0 +1,9 @@
+﻿@model List<BlogListModel>
+
+<ul class="list-group">
+    @foreach (var item in Model)
+    {
+        <li class="list-group-item"><a asp-controller="Home" asp-action="BlogDetail" asp-route-id ="@item.Id"> @item.Title</a></li>
+        <hr />
+    }
+</ul>

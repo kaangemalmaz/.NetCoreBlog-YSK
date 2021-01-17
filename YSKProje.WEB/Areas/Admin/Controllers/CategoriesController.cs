@@ -17,11 +17,13 @@ namespace YSKProje.WEB.Areas.Admin.Controllers
         // GET: Categories
         public async Task<IActionResult> Index()
         {
+            TempData["active"] = "category";
             return View(await _categoryApiService.GetAllCategoriesAsync());
         }
         // GET: Categories/Create
         public IActionResult Create()
         {
+            TempData["active"] = "category";
             return View();
         }
 
@@ -32,6 +34,7 @@ namespace YSKProje.WEB.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(CategoryAddModel categoryAddModel)
         {
+            TempData["active"] = "category";
             if (ModelState.IsValid)
             {
                 await _categoryApiService.CategoryAdd(categoryAddModel);
@@ -43,6 +46,7 @@ namespace YSKProje.WEB.Areas.Admin.Controllers
         // GET: Categories/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            TempData["active"] = "category";
             if (id == null)
             {
                 return NotFound();
@@ -64,6 +68,7 @@ namespace YSKProje.WEB.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id,CategoryUpdateModel categoryUpdateModel)
         {
+            TempData["active"] = "category";
             if (id != categoryUpdateModel.Id)
             {
                 return NotFound();
@@ -80,6 +85,7 @@ namespace YSKProje.WEB.Areas.Admin.Controllers
         // GET: Categories/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
+            TempData["active"] = "category";
             if (id == null)
             {
                 return NotFound();
@@ -99,8 +105,15 @@ namespace YSKProje.WEB.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+            TempData["active"] = "category";
             await _categoryApiService.CategoryDelete(id);
             return RedirectToAction(nameof(Index));
+        }
+
+        public IActionResult SignOut()
+        {
+            HttpContext.Session.Remove("token");
+            return RedirectToAction("Index", "Home", new { area = "" });
         }
     }
 }

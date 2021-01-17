@@ -19,22 +19,27 @@ namespace YSKProje.WEB.Controllers
             _blogApiService = blogApiService;
         }
 
-        public async Task<IActionResult> Index(int? categoryId)
+        public async Task<IActionResult> Index(int? categoryId, string s)
         {
             if (categoryId.HasValue)
             {
                 ViewBag.activeCategory = categoryId;
                 return View(await _blogApiService.GetAllByCategoryIdAsync((int)categoryId));
             }
-            else
+
+            if (!string.IsNullOrWhiteSpace(s))
             {
-                return View(await _blogApiService.GetAllAsync());
+                ViewBag.search = s;
+                return View(await _blogApiService.Search(s));
             }
+
+            return View(await _blogApiService.GetAllAsync());
+
         }
 
         public async Task<IActionResult> BlogDetail(int id)
         {
-            ViewBag.Comments =  await _blogApiService.GetCommentsAsync(id, null);
+            ViewBag.Comments = await _blogApiService.GetCommentsAsync(id, null);
             return View(await _blogApiService.GetByIdAsync(id));
         }
 
