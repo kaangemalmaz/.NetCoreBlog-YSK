@@ -10,7 +10,9 @@ namespace YSKProje.Business.Interfaces
         Task<List<Blog>> GetAllSortedByPostedTimeAsync();
         Task AddToCategoryAsync(CategoryBlogDto categoryBlogDto);
         Task RemoveFromCategoryAsync(CategoryBlogDto categoryBlogDto);
-
         Task<List<Blog>> GetAllByCategoryId(int categoryId);
+        Task<List<Category>> GetCategoriesAsync(int blogid);
+        Task<List<Blog>> GetLastFiveBlog();
+        Task<List<Blog>> Search(string searchString);
     }
 }

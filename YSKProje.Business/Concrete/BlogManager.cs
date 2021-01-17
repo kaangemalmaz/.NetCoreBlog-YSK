@@ -45,6 +45,16 @@ namespace YSKProje.Business.Concrete
             return await _genericDal.GetAllAsync(i => i.PostedTime);
         }
 
+        public async Task<List<Category>> GetCategoriesAsync(int blogid)
+        {
+            return await _blogDal.GetCategoriesAsync(blogid);
+        }
+
+        public async Task<List<Blog>> GetLastFiveBlog()
+        {
+            return await _blogDal.GetLastFiveBlog();
+        }
+
         public async Task RemoveFromCategoryAsync(CategoryBlogDto categoryBlogDto)
         {
             var deletedCategory = await _categoryBlogDal.GetAsync(i => i.BlogId == categoryBlogDto.BlogId && i.CategoryId == categoryBlogDto.CategoryId);
@@ -52,6 +62,11 @@ namespace YSKProje.Business.Concrete
             {
                 await _categoryBlogDal.RemoveAsync(deletedCategory);
             }
+        }
+
+        public async Task<List<Blog>> Search(string searchString)
+        {
+            return await _blogDal.GetAllAsync(i => i.Title.Contains(searchString) || i.Description.Contains(searchString) || i.ShortDescription.Contains(searchString), y => y.PostedTime);
         }
     }
 }

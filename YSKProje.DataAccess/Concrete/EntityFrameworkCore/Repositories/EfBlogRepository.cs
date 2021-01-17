@@ -31,5 +31,25 @@ namespace YSKProje.DataAccess.Concrete.EntityFrameworkCore.Repositories
                 Title = i.blog.Title
             }).ToListAsync();
         }
+
+        public async Task<List<Category>> GetCategoriesAsync(int blogid)
+        {
+            using var context = new UdemyBlogContext();
+            return await context.Categories.Join(context.CategoryBlogs, c => c.Id, cb => cb.CategoryId, (category, categoryBlog) => new
+            {
+                category = category,
+                categoryBlog = categoryBlog
+            }).Where(i => i.categoryBlog.BlogId == blogid).Select(i => new Category
+            {
+                Id = i.category.Id,
+                Name = i.category.Name
+            }).ToListAsync();
+        }
+
+        public async Task<List<Blog>> GetLastFiveBlog()
+        {
+            using var context = new UdemyBlogContext();
+            return await context.Blogs.Take(5).OrderByDescending(i=>i.PostedTime).ToListAsync();
+        }
     }
 }

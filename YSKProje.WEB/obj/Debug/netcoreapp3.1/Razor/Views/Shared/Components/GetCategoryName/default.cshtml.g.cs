@@ -62,14 +62,21 @@ using YSKProje.WEB.Models.AppUser;
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Users\KLharomin\source\repos\YSKProje\YSKProje.WEB\Views\_ViewImports.cshtml"
+#line 8 "C:\Users\KLharomin\source\repos\YSKProje\YSKProje.WEB\Views\_ViewImports.cshtml"
+using YSKProje.WEB.Models.Comment;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 11 "C:\Users\KLharomin\source\repos\YSKProje\YSKProje.WEB\Views\_ViewImports.cshtml"
 using YSKProje.WEB.Enums;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e28df823a456c6bc929fb6d60bc6583c013785b6", @"/Views/Shared/Components/GetCategoryName/default.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"40448a069d0e5794f069989b7807d22f28199662", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e43e352ee6471d352b9e0cc0bd4e79327ccfcb75", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Components_GetCategoryName_default : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<CategoryListModel>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Index", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -107,7 +114,7 @@ using YSKProje.WEB.Enums;
 #line hidden
 #nullable disable
             WriteLiteral(" kategorisine ait olan blogları görüyorsunuz. ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e28df823a456c6bc929fb6d60bc6583c013785b65404", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e28df823a456c6bc929fb6d60bc6583c013785b65600", async() => {
                 WriteLiteral(" Filtreyi kaldır.");
             }
             );

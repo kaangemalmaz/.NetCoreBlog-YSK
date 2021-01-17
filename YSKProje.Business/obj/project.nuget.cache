@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "JJFmlVRY1pwLYA0j9uny+C2QfgvCVvZ/5DJCnvPnwNjr+XmVgArB2zTwXE0qVuzBw0kUUmXXDGSqp0R+sY+OQQ==",
+  "dgSpecHash": "1942KGiFVUQcC85xfeKKr23RRq4pie23CygfCFvam7HK2gein/U5YC0QU7B8nTUh/sGBsBYQSfFMO2BBx5sWJQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\KLharomin\\source\\repos\\YSKProje\\YSKProje.Business\\YSKProje.Business.csproj",
   "expectedPackageFiles": [
@@ -35,6 +35,9 @@
     "C:\\Users\\KLharomin\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\KLharomin\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\KLharomin\\.nuget\\packages\\newtonsoft.json\\10.0.1\\newtonsoft.json.10.0.1.nupkg.sha512",
+    "C:\\Users\\KLharomin\\.nuget\\packages\\nlog\\4.7.6\\nlog.4.7.6.nupkg.sha512",
+    "C:\\Users\\KLharomin\\.nuget\\packages\\nlog.config\\4.7.6\\nlog.config.4.7.6.nupkg.sha512",
+    "C:\\Users\\KLharomin\\.nuget\\packages\\nlog.schema\\4.7.6\\nlog.schema.4.7.6.nupkg.sha512",
     "C:\\Users\\KLharomin\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\KLharomin\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\KLharomin\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",

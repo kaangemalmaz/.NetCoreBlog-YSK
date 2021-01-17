@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using YSKProje.API.CustomFilter;
@@ -9,6 +10,8 @@ using YSKProje.API.Models.Blog;
 using YSKProje.Business.Interfaces;
 using YSKProje.DTO.DTOs.BlogDtos;
 using YSKProje.DTO.DTOs.CategoryBlogDtos;
+using YSKProje.DTO.DTOs.CategoryDtos;
+using YSKProje.DTO.DTOs.CommentsDtos;
 using YSKProje.Entities.Concrete;
 
 namespace YSKProje.API.Controllers
@@ -19,11 +22,13 @@ namespace YSKProje.API.Controllers
     {
         private readonly IBlogService _blogService;
         private readonly IMapper _mapper;
+        private readonly ICommentService _commentService;
 
-        public BlogsController(IBlogService blogService, IMapper mapper)
+        public BlogsController(IBlogService blogService, IMapper mapper, ICommentService commentService)
         {
             _blogService = blogService;
             _mapper = mapper;
+            _commentService = commentService;
         }
 
         // GET: api/Blogs
@@ -141,7 +146,7 @@ namespace YSKProje.API.Controllers
         }
 
         [HttpDelete("[action]")]
-        public async Task<IActionResult> RemoveFromCategory(CategoryBlogDto categoryBlogDto)
+        public async Task<IActionResult> RemoveFromCategory([FromQuery] CategoryBlogDto categoryBlogDto)
         {
             await _blogService.RemoveFromCategoryAsync(categoryBlogDto);
             return NoContent();
@@ -152,6 +157,42 @@ namespace YSKProje.API.Controllers
         public async Task<IActionResult> GetAllByCategoryId(int id)
         {
             return Ok(await _blogService.GetAllByCategoryId(id));
+        }
+
+        //api/blogs/1/categories
+        //api/blogs/categories/1
+        [HttpGet("{id}/[action]")]
+        [ServiceFilter(typeof(ValidId<Blog>))]
+        public async Task<IActionResult> GetAllCategories(int id)
+        {
+            return Ok(_mapper.Map<List<CategoryListDto>>(await _blogService.GetCategoriesAsync(id)));
+        }
+
+        [HttpGet("[action]")]
+        public async Task<IActionResult> GetLastFiveBlog()
+        {
+            return Ok(_mapper.Map<List<BlogListDto>>(await _blogService.GetLastFiveBlog()));
+        }
+
+        [HttpGet("{id}/[action]")]
+        public async Task<IActionResult> GetComments([FromRoute] int id, [FromQuery] int? parentid)
+        {
+            return Ok(_mapper.Map<List<CommentListDto>>(await _commentService.GetAllWithSubComments(id, parentid)));
+        }
+
+        [HttpGet("[action]")]
+        public async Task<IActionResult> Search([FromQuery] string s)
+        {
+            return Ok(_mapper.Map<BlogListDto>(await _blogService.Search(s)));
+        }
+
+        [HttpPost("[action]")]
+        //[ValidModel]
+        public async Task<IActionResult> CommentAdd(CommentAddDto commentAddDto)
+        {
+            commentAddDto.PostedTime = DateTime.Now;
+            await _commentService.AddAsync(_mapper.Map<Comment>(commentAddDto));
+            return Created("", commentAddDto);
         }
     }
 }

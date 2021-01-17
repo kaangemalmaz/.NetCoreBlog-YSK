@@ -1,4 +1,33 @@
 ﻿@model BlogListModel
+@{
+    var comments = (List<CommentListModel>)ViewBag.Comments;
+    void GetComments(List<CommentListModel> comments)
+    {
+        if (comments.Count > 0)
+        {
+            @foreach (var comment in comments)
+            {
+                <div class="media my-3">
+                    <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+                    <div class="media-body">
+                        <h5 class="mt-0">@comment.AuthorName</h5>
+                        @comment.Description
+                        <button type="button" class="btn btn-sm btn-primary float-right" onclick="showCommentForm(@comment.Id,@comment.BlogId)">Cevapla</button>
+                        <div id="commentBox@(comment.Id)">
+
+                        </div>
+                        @{
+                            GetComments(comment.SubComment);
+                        }
+                    </div>
+                </div>
+            }
+        }
+    }
+}
+
+
+
 <!-- Title -->
 <h1 class="mt-4">@Model.Title</h1>
 
@@ -22,54 +51,65 @@
 <hr>
 
 <!-- Post Content -->
-<p>@Model.Description</p>
+<p>@Html.Raw(Model.Description)</p>
 
 <hr>
 
+@*
+
+    public string AuthorName { get; set; }
+            public string AuthorEmail { get; set; }
+            public string Description { get; set; }
+            public DateTime PostedTime { get; set; } = DateTime.Now;
+            public int? ParentCommentId { get; set; }
+            public int BlogId { get; set; }
+
+*@
+
 <!-- Comments Form -->
 <div class="card my-4">
-    <h5 class="card-header">Leave a Comment:</h5>
+    <h5 class="card-header">Yorum Yazınız</h5>
     <div class="card-body">
-        <form>
+        <form method="post" asp-action="CommentAdd" asp-controller="Home">
+            <input type="hidden" name="BlogId" value="@Model.Id" />
             <div class="form-group">
-                <textarea class="form-control" rows="3"></textarea>
+                <label>Adınız</label>
+                <input type="text" name="AuthorName" required class="form-control" rows="3" />
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="form-group">
+                <label>Email Adresiniz</label>
+                <input type="email" name="AuthorEmail" required class="form-control" rows="3" />
+            </div>
+            <div class="form-group">
+                <label>Yorumunuz</label>
+                <textarea name="Description" required class="form-control" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-sm btn-primary">Gönder</button>
         </form>
     </div>
 </div>
 
-<!-- Single Comment -->
-<div class="media mb-4">
-    <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-    <div class="media-body">
-        <h5 class="mt-0">Commenter Name</h5>
-        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-    </div>
-</div>
+
 
 <!-- Comment with nested comments -->
-<div class="media mb-4">
-    <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-    <div class="media-body">
-        <h5 class="mt-0">Commenter Name</h5>
-        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+@{
+    GetComments(comments);
+}
 
-        <div class="media mt-4">
-            <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-            <div class="media-body">
-                <h5 class="mt-0">Commenter Name</h5>
-                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-            </div>
-        </div>
 
-        <div class="media mt-4">
-            <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-            <div class="media-body">
-                <h5 class="mt-0">Commenter Name</h5>
-                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-            </div>
-        </div>
+@section JS{
 
-    </div>
-</div>
+    <script>
+
+        function showCommentForm(id,blogId){
+            let html = `<div class="card my-4"><h5 class="card-header">Yorum Yazınız</h5><div class="card-body"><form method="post" action="/Home/CommentAdd" > <input type="hidden" name="BlogId" value="${blogId}" /> <input type="hidden" name="ParentCommentId" value="${id}" /><div class="form-group"> <label>Adınız</label> <input type="text" name="AuthorName" required class="form-control" rows="3" /></div><div class="form-group"> <label>Email Adresiniz</label> <input type="email" name="AuthorEmail" required class="form-control" rows="3" /></div><div class="form-group"> <label>Yorumunuz</label><textarea name="Description" required class="form-control" rows="3"></textarea></div> <button type="button" class="btn btn-sm btn-warning" onclick = "hideCommentForm(${id})">Vazgeç</button> <button type="submit" class="btn btn-sm btn-primary">Gönder</button></form></div></div>`;
+            $("#commentBox"+id).html(html);
+        }
+
+
+        function hideCommentForm(id){
+            $("#commentBox"+id).html("");
+        }
+    </script>
+
+}

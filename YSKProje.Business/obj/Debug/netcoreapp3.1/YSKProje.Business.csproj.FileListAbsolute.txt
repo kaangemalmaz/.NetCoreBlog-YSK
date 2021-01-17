@@ -13,4 +13,5 @@ C:\Users\KLharomin\source\repos\YSKProje\YSKProje.Business\obj\Debug\netcoreapp3
 C:\Users\KLharomin\source\repos\YSKProje\YSKProje.Business\obj\Debug\netcoreapp3.1\YSKProje.Business.pdb
 C:\Users\KLharomin\source\repos\YSKProje\YSKProje.Business\bin\Debug\netcoreapp3.1\YSKProje.DTO.dll
 C:\Users\KLharomin\source\repos\YSKProje\YSKProje.Business\bin\Debug\netcoreapp3.1\YSKProje.DTO.pdb
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.Business\bin\Debug\netcoreapp3.1\NLog.config
 C:\Users\KLharomin\source\repos\YSKProje\YSKProje.Business\obj\Debug\netcoreapp3.1\YSKProje.Business.csproj.CoreCompileInputs.cache

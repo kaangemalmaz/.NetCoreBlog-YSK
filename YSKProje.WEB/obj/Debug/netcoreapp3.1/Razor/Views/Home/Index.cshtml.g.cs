@@ -62,14 +62,21 @@ using YSKProje.WEB.Models.AppUser;
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Users\KLharomin\source\repos\YSKProje\YSKProje.WEB\Views\_ViewImports.cshtml"
+#line 8 "C:\Users\KLharomin\source\repos\YSKProje\YSKProje.WEB\Views\_ViewImports.cshtml"
+using YSKProje.WEB.Models.Comment;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 11 "C:\Users\KLharomin\source\repos\YSKProje\YSKProje.WEB\Views\_ViewImports.cshtml"
 using YSKProje.WEB.Enums;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"28f8152072b2fbea700058ed87fe5be63618e74d", @"/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"40448a069d0e5794f069989b7807d22f28199662", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e43e352ee6471d352b9e0cc0bd4e79327ccfcb75", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<BlogListModel>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Home", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -155,7 +162,7 @@ else
 #line hidden
 #nullable disable
             WriteLiteral("        <div class=\"card mb-4\">\r\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("getblogimage", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "28f8152072b2fbea700058ed87fe5be63618e74d6917", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("getblogimage", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "28f8152072b2fbea700058ed87fe5be63618e74d7113", async() => {
             }
             );
             __YSKProje_WEB_TagHelpers_ImageTagHelper = CreateTagHelper<global::YSKProje.WEB.TagHelpers.ImageTagHelper>();
@@ -192,7 +199,7 @@ __YSKProje_WEB_TagHelpers_ImageTagHelper.Id = blog.Id;
 #line hidden
 #nullable disable
             WriteLiteral("</p>\r\n                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "28f8152072b2fbea700058ed87fe5be63618e74d8866", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "28f8152072b2fbea700058ed87fe5be63618e74d9062", async() => {
                 WriteLiteral("Read More &rarr;");
             }
             );

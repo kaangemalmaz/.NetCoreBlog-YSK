@@ -2,6 +2,7 @@
 using YSKProje.API.Models.Blog;
 using YSKProje.DTO.DTOs.BlogDtos;
 using YSKProje.DTO.DTOs.CategoryDtos;
+using YSKProje.DTO.DTOs.CommentsDtos;
 using YSKProje.Entities.Concrete;
 
 namespace YSKProje.API.Mapping.AutoMapperProfile
@@ -23,6 +24,11 @@ namespace YSKProje.API.Mapping.AutoMapperProfile
             CreateMap<Category, CategoryAddDto>();
             CreateMap<CategoryUpdateDto, Category>();
             CreateMap<Category, CategoryUpdateDto>();
+
+            CreateMap<Comment, CommentListDto>();
+            CreateMap<CommentListDto, Comment>();
+            CreateMap<Comment, CommentAddDto>();
+            CreateMap<CommentAddDto, Comment>();
 
         }
     }

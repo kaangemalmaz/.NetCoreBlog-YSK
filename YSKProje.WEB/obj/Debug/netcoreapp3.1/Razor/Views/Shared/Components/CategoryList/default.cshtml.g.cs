@@ -62,14 +62,21 @@ using YSKProje.WEB.Models.AppUser;
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Users\KLharomin\source\repos\YSKProje\YSKProje.WEB\Views\_ViewImports.cshtml"
+#line 8 "C:\Users\KLharomin\source\repos\YSKProje\YSKProje.WEB\Views\_ViewImports.cshtml"
+using YSKProje.WEB.Models.Comment;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 11 "C:\Users\KLharomin\source\repos\YSKProje\YSKProje.WEB\Views\_ViewImports.cshtml"
 using YSKProje.WEB.Enums;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2ae7676d896ba25e5419de7547b10dd0b150b2c0", @"/Views/Shared/Components/CategoryList/default.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"40448a069d0e5794f069989b7807d22f28199662", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e43e352ee6471d352b9e0cc0bd4e79327ccfcb75", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Components_CategoryList_default : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<CategoryWithBlogsCountModel>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Home", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -108,7 +115,7 @@ using YSKProje.WEB.Enums;
 #line hidden
 #nullable disable
             WriteLiteral("        <div class=\"list-group\">\r\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2ae7676d896ba25e5419de7547b10dd0b150b2c05392", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2ae7676d896ba25e5419de7547b10dd0b150b2c05588", async() => {
                 WriteLiteral("\r\n                ");
 #nullable restore
 #line 9 "C:\Users\KLharomin\source\repos\YSKProje\YSKProje.WEB\Views\Shared\Components\CategoryList\default.cshtml"

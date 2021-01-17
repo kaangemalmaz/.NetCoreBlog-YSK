@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "XeoFjArUlPcM3MOLhRbsNly87pIat6HsZQB1D9hb1lVfeqf99Zc23qmeximFPXotpWjwGAyzUtAZwn5YlQaXsQ==",
+  "dgSpecHash": "iIyR0vCm0BE04eDg/jgQVHjd4nX1NH+j0ywcqYR59I2luX47z5Vw4aDmNLivOfnSqwl1hoNVYAfK6wR/4/JqCQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\KLharomin\\source\\repos\\YSKProje\\YSKProje.API\\YSKProje.API.csproj",
   "expectedPackageFiles": [
@@ -68,6 +68,9 @@
     "C:\\Users\\KLharomin\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\KLharomin\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
     "C:\\Users\\KLharomin\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
+    "C:\\Users\\KLharomin\\.nuget\\packages\\nlog\\4.7.6\\nlog.4.7.6.nupkg.sha512",
+    "C:\\Users\\KLharomin\\.nuget\\packages\\nlog.config\\4.7.6\\nlog.config.4.7.6.nupkg.sha512",
+    "C:\\Users\\KLharomin\\.nuget\\packages\\nlog.schema\\4.7.6\\nlog.schema.4.7.6.nupkg.sha512",
     "C:\\Users\\KLharomin\\.nuget\\packages\\nuget.frameworks\\4.7.0\\nuget.frameworks.4.7.0.nupkg.sha512",
     "C:\\Users\\KLharomin\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\KLharomin\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using YSKProje.WEB.ApiServices.Interfaces;
 using YSKProje.WEB.Models;
+using YSKProje.WEB.Models.Comment;
 
 namespace YSKProje.WEB.Controllers
 {
@@ -33,7 +34,14 @@ namespace YSKProje.WEB.Controllers
 
         public async Task<IActionResult> BlogDetail(int id)
         {
+            ViewBag.Comments =  await _blogApiService.GetCommentsAsync(id, null);
             return View(await _blogApiService.GetByIdAsync(id));
+        }
+
+        public async Task<IActionResult> CommentAdd(CommentAddModel model)
+        {
+            await _blogApiService.CommentAddAsync(model);
+            return RedirectToAction("BlogDetail", new { id = model.BlogId });
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

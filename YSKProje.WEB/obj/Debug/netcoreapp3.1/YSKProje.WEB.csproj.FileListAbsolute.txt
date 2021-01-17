@@ -199,3 +199,5 @@ C:\Users\KLharomin\source\repos\YSKProje\YSKProje.WEB\obj\Debug\netcoreapp3.1\Ra
 C:\Users\KLharomin\source\repos\YSKProje\YSKProje.WEB\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Categories\Details.cshtml.g.cs
 C:\Users\KLharomin\source\repos\YSKProje\YSKProje.WEB\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Categories\Edit.cshtml.g.cs
 C:\Users\KLharomin\source\repos\YSKProje\YSKProje.WEB\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Categories\Index.cshtml.g.cs
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.WEB\bin\Debug\netcoreapp3.1\NLog.config
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.WEB\bin\Debug\netcoreapp3.1\NLog.dll

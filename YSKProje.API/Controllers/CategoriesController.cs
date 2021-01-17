@@ -1,10 +1,12 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using YSKProje.API.CustomFilter;
 using YSKProje.Business.Interfaces;
+using YSKProje.Business.Tools.LogTool;
 using YSKProje.DTO.DTOs.CategoryDtos;
 using YSKProje.Entities.Concrete;
 
@@ -16,11 +18,13 @@ namespace YSKProje.API.Controllers
     {
         private readonly IMapper _mapper;
         private readonly ICategoryService _categoryService;
+        private readonly ICustomLogger _customLogger;
 
-        public CategoriesController(IMapper mapper, ICategoryService categoryService)
+        public CategoriesController(IMapper mapper, ICategoryService categoryService, ICustomLogger customLogger)
         {
             _mapper = mapper;
             _categoryService = categoryService;
+            _customLogger = customLogger;
         }
 
 
@@ -112,6 +116,15 @@ namespace YSKProje.API.Controllers
             }
 
             return Ok(listdto);
+        }
+
+
+        [Route("/Error")]
+        public IActionResult Error()
+        {
+            var errorInfo = HttpContext.Features.Get<IExceptionHandlerPathFeature>();
+            _customLogger.LogError($"\n Hatanın oluştuğu yer: {errorInfo.Path} \n Hata Mesajı : {errorInfo.Error.Message} \n Stack Trace : {errorInfo.Error.StackTrace}");
+            return Problem("Bir hata oluştu en kısa zamanda düzeltilecektir");
         }
     }
 }

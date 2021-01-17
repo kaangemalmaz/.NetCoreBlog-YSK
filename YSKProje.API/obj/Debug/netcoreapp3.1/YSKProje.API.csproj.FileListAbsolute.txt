@@ -171,3 +171,5 @@ C:\Users\KLharomin\source\repos\YSKProje\YSKProje.API\bin\Debug\netcoreapp3.1\Fl
 C:\Users\KLharomin\source\repos\YSKProje\YSKProje.API\bin\Debug\netcoreapp3.1\FluentValidation.AspNetCore.dll
 C:\Users\KLharomin\source\repos\YSKProje\YSKProje.API\bin\Debug\netcoreapp3.1\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\KLharomin\source\repos\YSKProje\YSKProje.API\obj\Debug\netcoreapp3.1\YSKProje.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.API\bin\Debug\netcoreapp3.1\NLog.config
+C:\Users\KLharomin\source\repos\YSKProje\YSKProje.API\bin\Debug\netcoreapp3.1\NLog.dll
